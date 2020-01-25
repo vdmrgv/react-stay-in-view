@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-function App() {
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as actions from "./actions";
+
+const App = props => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        {props.isShowed && <img src={logo} className="App-logo" alt="logo" />}
+        <button
+          className="common-btn"
+          onClick={() => props.showOrHide(!props.isShowed)}
         >
-          Learn React
-        </a>
+          {props.isShowed ? "HIDE" : "SHOW"}
+        </button>
       </header>
     </div>
   );
-}
+};
 
-export default App;
+const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch);
+
+const mapStateToProps = state => state;
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
