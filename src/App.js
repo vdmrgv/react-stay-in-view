@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "./logo.svg";
+import logoRedux from "./logo-redux.svg";
 import "./App.css";
 
 import { connect } from "react-redux";
@@ -10,12 +11,12 @@ const App = props => {
   return (
     <div className="App">
       <header className="App-header">
-        {props.isShowed && <img src={logo} className="App-logo" alt="logo" />}
+        <img src={props.isShowed ? logo : logoRedux} className="App-logo" alt="logo" />
         <button
-          className="common-btn"
+          className="App-button"
           onClick={() => props.showOrHide(!props.isShowed)}
         >
-          {props.isShowed ? "HIDE" : "SHOW"}
+          {props.isShowed ? "REDUX" : "REACT"}
         </button>
       </header>
     </div>

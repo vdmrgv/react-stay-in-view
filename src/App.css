@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.App-button {
+  width: 250px;
+  height: 75px;
+  background-color: brown;
+  border: none;
+  color: whitesmoke;
+  font-size: xx-large;
+}
