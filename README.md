@@ -64,17 +64,20 @@ const App = () => {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
+  const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(e.currentTarget);
+    setIsVisible((prev) => !prev);
+  };
+
   return (
     <div>
-      {isVisible && <StayInView anchorEl={anchorEl}>
-        <div>I stay on the screen, just scroll</div>
-      </StayInView>}
-      <button onClick={(e) => {
-        setAnchorEl(e.current.target);
-        setIsVisible(true);
-      }}
-      >
-        Open popper
+      {isVisible && (
+        <StayInView anchorEl={anchorEl}>
+          <div>I stay on the screen</div>
+        </StayInView>
+      )}
+      <button onClick={onClick}>
+        Click me!
       </button>
     </div>
   );
