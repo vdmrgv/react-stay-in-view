@@ -1,6 +1,6 @@
 {
   "name": "react-stay-in-view",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "description": "A hook and component to keep the element from disappearing from the screen when scrolling and resizing.",
   "author": "Vadim Rogov <vadimrogovd@gmail.com>",
