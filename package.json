@@ -2,7 +2,7 @@
   "name": "react-stay-in-view",
   "version": "1.0.0",
   "license": "MIT",
-  "description": "A hook or component to keep the element from disappearing from the screen on scroll.",
+  "description": "A hook or component to keep the element from disappearing from the screen when scrolling and resizing.",
   "author": "Vadim Rogov <vadimrogovd@gmail.com>",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
