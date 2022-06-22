@@ -9,6 +9,9 @@
 
 A hook and component to keep the element from disappearing from the screen when scrolling and resizing.
 
+![Preview](https://media.giphy.com/media/wu1y12WYIxLVirwIJD/giphy.gif)
+
+
 ## Install
 
 ```bash
