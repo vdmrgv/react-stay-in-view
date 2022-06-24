@@ -9,6 +9,18 @@
 
 A hook and component to keep the element from disappearing from the screen when scrolling and resizing.
 
+## Features
+
+- 🚀 **Fast** - Built with hooks and functional components only.
+- 🛠 **Written in TypeScript** - It'll fit right into your existing TypeScript
+  project.
+- 👫 **Cross-browser** - Works out-of-the-box for most browsers, regardless of version.
+- 📲 **Mobile-friendly** - Supports mobile devices and touch screens.
+- 🌳 **Tree-shakeable** - Only include the parts you use.
+- 🗜 **Lightweight** - Around `~870B`.
+- 💨 **No dependencies**
+
+
 Try it live:
 <br />
 [![Try it live](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-stay-in-view-o7nm80)
