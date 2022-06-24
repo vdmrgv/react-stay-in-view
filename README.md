@@ -60,10 +60,10 @@ const StayInView = ({ className, children, anchorEl, placement }) => {
 
 Output: `ref` - paste this `ref` in your component
 
-| Name            | Required | Description                                                                                                                                                                                      | Type             | Default Value |
-| --------------- | -------- | -------------------------------------------------------------- | ---------------- | ------------- |
-| anchorEl        | ❌       | An element relative to which the new position will be fixed    | `HTMLElement`    | `null`        |
-| placement       | ❌       | Element position relative to `anchorEl`                        | `string`           | `right-start` |
+| Name            | Description                                                                                                                                                                                      | Type             | Required | Default Value |
+| --------------- | -------------------------------------------------------------- | ---------------- | - | ------------- |
+| anchorEl        | An element relative to which the new position will be fixed    | `HTMLElement`    |   | `null`        |
+| placement       | Element position relative to `anchorEl`                        | `string`         |   | `right-start` |
 
 
 ### `StayInView` component
@@ -98,12 +98,12 @@ const App = () => {
 
 **Props**
 
-| Name            | Required | Description                                                                                                                                                                                      | Type             | Default Value |
-| --------------- | -------- | -------------------------------------------------------------- | ---------------- | ------------- |
-| children        | ✅       | A children element                                             | `ReactNode`      |               |
-| className       | ❌       | Container class name.                                          | `string`         | `null`        |
-| anchorEl        | ❌       | An element relative to which the new position will be fixed    | `HTMLElement`    | `null`        |
-| placement       | ❌       | Element position relative to `anchorEl`                        | `string`         | `right-start` |
+| Name            | Description                                                                                                                                                                                      | Type             | Required | Default Value |
+| --------------- | -------------------------------------------------------------- | ---------------- | ----| ------------- |
+| children        | A children element                                             | `ReactNode`      | ✅ |               |
+| className       | Container class name.                                          | `string`         |    | `null`        |
+| anchorEl        | An element relative to which the new position will be fixed    | `HTMLElement`    |    | `null`        |
+| placement       | Element position relative to `anchorEl`                        | `string`         |    | `right-start` |
 
 <br />
 
