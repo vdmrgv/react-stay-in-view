@@ -24,7 +24,7 @@ Try it live:
 <br />
 [![Try it live](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-stay-in-view-o7nm80)
 
-![Preview](https://media.giphy.com/media/DjgYZk5NFdIAAK6xNv/giphy.gif)
+![Preview](https://media.giphy.com/media/oAPxTZ5igLpLOPmID3/giphy.gif)
 
 ## Install
 
