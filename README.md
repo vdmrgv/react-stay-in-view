@@ -69,8 +69,8 @@ Output: `ref` - paste this `ref` in your component
 import { StayInView } from 'react-stay-in-view';
 
 const App = () => {
-  const [anchorEl, setAnchorEl] = (useState < HTMLElement) | (null > null);
-  const [isVisible, setIsVisible] = useState < boolean > false;
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(e.currentTarget);
