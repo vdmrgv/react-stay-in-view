@@ -20,13 +20,11 @@ A hook and component to keep the element from disappearing from the screen when 
 - 🗜 **Lightweight** - Around `~870B`.
 - 💨 **No dependencies**
 
-
 Try it live:
 <br />
 [![Try it live](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-stay-in-view-o7nm80)
 
 ![Preview](https://media.giphy.com/media/DjgYZk5NFdIAAK6xNv/giphy.gif)
-
 
 ## Install
 
@@ -44,7 +42,6 @@ Try it live:
 ```js
 import { useStayInView } from 'react-stay-in-view';
 
-
 const StayInView = ({ className, children, anchorEl, placement }) => {
   const { ref } = useStayInView({ anchorEl, placement });
 
@@ -60,21 +57,20 @@ const StayInView = ({ className, children, anchorEl, placement }) => {
 
 Output: `ref` - paste this `ref` in your component
 
-| Name            | Description                                                                                                                                                                                      | Type             | Required | Default Value |
-| --------------- | -------------------------------------------------------------- | ---------------- | - | ------------- |
-| anchorEl        | An element relative to which the new position will be fixed    | `HTMLElement`    |   | `null`        |
-| placement       | Element position relative to `anchorEl`                        | `string`         |   | `right-start` |
-
+| Name               | Description                                                          | Type          | Required | Default Value |
+| ------------------ | -------------------------------------------------------------------- | ------------- | -------- | ------------- |
+| anchorEl           | An element relative to which the new position will be fixed          | `HTMLElement` |          | `null`        |
+| placement          | Element position relative to `anchorEl`                              | `string`      |          | `right-start` |
+| avoidAnchorOverlap | Prevents `anchorEl` from overlapping when scrolling to screen border | `boolean`     |          | `true`        |
 
 ### `StayInView` component
 
 ```js
 import { StayInView } from 'react-stay-in-view';
 
-
 const App = () => {
-  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
-  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [anchorEl, setAnchorEl] = (useState < HTMLElement) | (null > null);
+  const [isVisible, setIsVisible] = useState < boolean > false;
 
   const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(e.currentTarget);
@@ -88,9 +84,7 @@ const App = () => {
           <div>I stay on the screen</div>
         </StayInView>
       )}
-      <button onClick={onClick}>
-        Click me!
-      </button>
+      <button onClick={onClick}>Click me!</button>
     </div>
   );
 };
@@ -98,12 +92,13 @@ const App = () => {
 
 **Props**
 
-| Name            | Description                                                                                                                                                                                      | Type             | Required | Default Value |
-| --------------- | -------------------------------------------------------------- | ---------------- | ----| ------------- |
-| children        | A children element                                             | `ReactNode`      | ✅ |               |
-| className       | Container class name.                                          | `string`         |    | `null`        |
-| anchorEl        | An element relative to which the new position will be fixed    | `HTMLElement`    |    | `null`        |
-| placement       | Element position relative to `anchorEl`                        | `string`         |    | `right-start` |
+| Name               | Description                                                          | Type          | Required | Default Value |
+| ------------------ | -------------------------------------------------------------------- | ------------- | -------- | ------------- |
+| children           | A children element                                                   | `ReactNode`   | ✅       |               |
+| className          | Container class name.                                                | `string`      |          | `null`        |
+| anchorEl           | An element relative to which the new position will be fixed          | `HTMLElement` |          | `null`        |
+| placement          | Element position relative to `anchorEl`                              | `string`      |          | `right-start` |
+| avoidAnchorOverlap | Prevents `anchorEl` from overlapping when scrolling to screen border | `boolean`     |          | `true`        |
 
 <br />
 
