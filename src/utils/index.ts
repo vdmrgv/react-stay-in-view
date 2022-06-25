@@ -2,8 +2,8 @@ import { ElementPlacement, ElementPosition } from '../types';
 
 export const getAvoidOverlapPlacement = (elementRect: DOMRect, anchorRect: DOMRect, placement: ElementPlacement) => {
   const shouldReverseTopPlacement = anchorRect.top - elementRect.height - anchorRect.height < 0;
-  const shouldReverseRightPlacement = anchorRect.left + anchorRect.width + elementRect.width > window.innerHeight;
-  const shouldReverseBottomPlacement = anchorRect.top + anchorRect.height + elementRect.height > window.innerWidth;
+  const shouldReverseRightPlacement = anchorRect.left + anchorRect.width + elementRect.width > window.innerWidth;
+  const shouldReverseBottomPlacement = anchorRect.top + anchorRect.height + elementRect.height > window.innerHeight;
   const shouldReverseLeftPlacement = anchorRect.left - elementRect.width < 0;
 
   switch (placement) {
