@@ -16,6 +16,7 @@ export enum ElementPlacement {
 export interface UseStayInViewProps {
   anchorEl?: HTMLElement | null;
   placement?: ElementPlacement;
+  avoidAnchorOverlap?: boolean;
 }
 
 export interface StayInViewProps extends UseStayInViewProps {

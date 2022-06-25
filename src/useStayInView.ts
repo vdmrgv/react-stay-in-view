@@ -2,17 +2,21 @@ import { useEffect, useRef } from 'react';
 import { ElementPlacement, UseStayInViewProps } from './types';
 import { getPosition, setElementPosition } from './utils';
 
-const useStatyInView = ({ anchorEl, placement = ElementPlacement.RIGHT_START }: UseStayInViewProps) => {
+const useStatyInView = ({
+  anchorEl,
+  placement = ElementPlacement.RIGHT_START,
+  avoidAnchorOverlap = true,
+}: UseStayInViewProps) => {
   const ref = useRef<any>(null);
 
   useEffect(() => {
     if (!ref.current || !anchorEl) return;
-    const element = ref.current as HTMLElement;
+    const el = ref.current as HTMLElement;
 
     const onChange = () => {
-      const newPosition = getPosition(ref.current, anchorEl, placement);
+      const newPosition = getPosition(ref.current, anchorEl, placement, avoidAnchorOverlap);
 
-      setElementPosition(element, newPosition);
+      setElementPosition(el, newPosition);
     };
 
     onChange();
@@ -24,7 +28,7 @@ const useStatyInView = ({ anchorEl, placement = ElementPlacement.RIGHT_START }: 
       window.removeEventListener('resize', onChange);
       window.removeEventListener('scroll', onChange);
     };
-  }, [anchorEl, ref, placement]);
+  }, [anchorEl, ref, placement, avoidAnchorOverlap]);
 
   return {
     ref,
