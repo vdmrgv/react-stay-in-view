@@ -11,12 +11,12 @@ const useStatyInView = ({
 
   useEffect(() => {
     if (!ref.current || !anchorEl) return;
-    const el = ref.current as HTMLElement;
+    const element = ref.current as HTMLElement;
 
     const onChange = () => {
       const newPosition = getPosition(ref.current, anchorEl, placement, avoidAnchorOverlap);
 
-      setElementPosition(el, newPosition);
+      setElementPosition(element, newPosition);
     };
 
     onChange();

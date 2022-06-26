@@ -45,12 +45,22 @@ export const getPosition = (
   const elementRect = element.getBoundingClientRect();
   const anchorRect = anchor.getBoundingClientRect();
 
+  const height = window.innerHeight;
+  const width = window.innerWidth;
+
   const position = {
     x: 0,
     y: 0,
   };
 
-  const avoidPlacement = avoidAnchorOverlap ? getAvoidOverlapPlacement(elementRect, anchorRect, placement) : placement;
+  const anchorIsVisible =
+    anchorRect.top + anchorRect.height > 0 &&
+    anchorRect.top < height &&
+    anchorRect.left + anchorRect.width > 0 &&
+    anchorRect.left < width;
+
+  const avoidPlacement =
+    avoidAnchorOverlap && anchorIsVisible ? getAvoidOverlapPlacement(elementRect, anchorRect, placement) : placement;
 
   switch (avoidPlacement) {
   case ElementPlacement.TOP_START:
@@ -102,9 +112,6 @@ export const getPosition = (
     position.y = anchorRect.top - elementRect.height + anchorRect.height;
     break;
   }
-
-  const height = window.innerHeight;
-  const width = window.innerWidth;
 
   return {
     top: position.y < 0 ? 0 : position.y > height - elementRect.height ? height - elementRect.height : position.y,
