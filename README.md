@@ -7,7 +7,7 @@
 [![Downloads][downloads-image]][downloads-url]
 [![NPM total downloads](https://img.shields.io/npm/dt/react-stay-in-view.svg?style=flat)](https://npmcharts.com/compare/react-stay-in-view?minimal=true)
 
-A react hook and component for popper and popover to prevent them from disappearing from the screen on scroll and resize features.
+A react hook and component for popper and popover to prevent them from disappearing from the screen on scroll and resize.
 
 ## Features
 
