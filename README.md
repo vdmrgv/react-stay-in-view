@@ -7,7 +7,7 @@
 [![Downloads][downloads-image]][downloads-url]
 [![NPM total downloads](https://img.shields.io/npm/dt/react-stay-in-view.svg?style=flat)](https://npmcharts.com/compare/react-stay-in-view?minimal=true)
 
-A hook and component to keep the element from disappearing from the screen when scrolling and resizing.
+A react hook and component for popper and popover to prevent them from disappearing from the screen on scroll and resize features.
 
 ## Features
 
@@ -102,9 +102,13 @@ const App = () => {
 
 <br />
 
+## Contributions
+
+Learn how to [contribute](https://github.com/vdmrgv/react-stay-in-view/blob/main/CONTRIBUTING.md)
+
 ## License
 
-MIT © [vdmrgv](https://github.com/vdmrgv)
+[MIT](https://github.com/vdmrgv/react-stay-in-view/blob/main/LICENSE) © [vdmrgv](https://github.com/vdmrgv)
 
 [package-url]: https://npmjs.org/package/react-stay-in-view
 [npm-version-svg]: https://img.shields.io/npm/v/react-stay-in-view.svg
