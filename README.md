@@ -17,7 +17,7 @@ A react hook and component to create popper (popover) that never leave the scree
 - 👫 **Cross-browser** - Works out-of-the-box for most browsers, regardless of version.
 - 📲 **Mobile-friendly** - Supports mobile devices and touch screens.
 - 🌳 **Tree-shakeable** - Only include the parts you use.
-- 🗜 **Lightweight** - Around `~870B`.
+- 🗜 **Lightweight** - Around `~1.1kB`.
 - 💨 **No dependencies**
 
 Try it live:
@@ -69,8 +69,8 @@ Output: `ref` - paste this `ref` in your component
 import { StayInView } from 'react-stay-in-view';
 
 const App = () => {
-  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
-  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [anchorEl, setAnchorEl] = (useState < HTMLElement) | (null > null);
+  const [isVisible, setIsVisible] = useState < boolean > false;
 
   const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(e.currentTarget);
