@@ -5,7 +5,7 @@ import dts from 'rollup-plugin-dts';
 import external from 'rollup-plugin-peer-deps-external';
 import { terser } from 'rollup-plugin-terser';
 import { babel } from '@rollup/plugin-babel';
-import pkg from './package.json';
+import pkg from './package.json' assert { type: 'json' };
 
 export default [
   {
@@ -37,7 +37,7 @@ export default [
     ],
   },
   {
-    input: 'dist/esm/types/index.d.ts',
+    input: 'dist/esm/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts()],
   },
