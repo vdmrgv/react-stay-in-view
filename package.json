@@ -1,6 +1,6 @@
 {
   "name": "react-stay-in-view",
-  "version": "1.1.9",
+  "version": "1.2.0",
   "license": "MIT",
   "description": "A react hook and component to create popper (popover) that never leave the screen.",
   "author": "Vadim Rogov <vadimrogovd@gmail.com>",
